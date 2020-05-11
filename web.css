@@ -1,0 +1,47 @@
+#snackbar {
+    visibility: hidden;
+    min-width: 180px;
+    margin-left: -125px;
+    background-color: paleturquoise;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 16px;
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    font-size: 14px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+  }
+
+  #chineseDiv, #englishDiv{
+    width: 45%;
+    font-size: 20px;
+    text-align: center;
+    border-color: paleturquoise;
+    margin: 16px;
+    margin-top: 5%;
+    border-style: solid;
+    float:left;
+  }
+  #buttons {
+    float:left;
+    margin-left:40%;
+    border-style: none;
+  }
+  input {
+    font-size: 15px;
+    margin: 16px;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  button {
+    font-size: 15px;
+    border-radius: 20px;
+    background: paleturquoise;
+    border-style: none;
+    margin: 10px;
+  }
