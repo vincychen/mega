@@ -34,5 +34,17 @@ addTranslation = async function (phrase, translation) {
         throw err;
     }
 }
+
+updateTranslation = async function (phrase, translation) {
+    phrase.trim();
+    string = `UPDATE dictionary SET chinese = '${translation}' WHERE english = '${phrase.toLowerCase()}'`;
+    try{
+        data = await query(string);
+        return data;
+    } catch (err) {
+        throw err;
+    }
+}
 exports.getTranslation = getTranslation;
 exports.addTranslation = addTranslation;
+exports.updateTranslation = updateTranslation;

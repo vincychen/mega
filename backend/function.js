@@ -22,9 +22,11 @@ getTranslation = async (req, res) => {
 }
 
 addTranslation = async (req, res) => {
+    phrase = req.query.phrase;
+    translation = req.query.translation;
     try {
-        if(req.query.phrase){
-            respone = await database.addTranslation(req.query.phrase, req.query.translation);
+        if(phrase){
+            respone = await database.addTranslation(phrase, translation);
             res.send("Phrase is in the database now");
         } else {
             res.status(400);
@@ -32,8 +34,15 @@ addTranslation = async (req, res) => {
         }
     } catch (e) {
         if (e.errno == 1062) {
-            res.status(401);
-            res.json({message:'This phrase is already in the database'});
+            data = await database.getTranslation(req.query.phrase);
+            if (translation && !data.chinese) {
+                data = await database.updateTranslation(phrase,translation);
+                res.status(200);
+                res.send({message:'The translation is added to the database successfully'});
+            } else {
+                res.status(401);
+                res.json({message:'This phrase is already in the database'});   
+            }
         } else {
             console.log(e);
             res.status(500);
