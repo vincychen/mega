@@ -4,7 +4,8 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'vincy520',
-    database: 'sys'
+    database: 'sys',
+    port: 3306
   });
 const query = util.promisify(connection.query).bind(connection)
 getTranslation = async function (phrase) {
