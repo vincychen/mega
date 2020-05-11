@@ -39,7 +39,7 @@ CREATE TABLE `dictionary` (
 
 LOCK TABLES `dictionary` WRITE;
 /*!40000 ALTER TABLE `dictionary` DISABLE KEYS */;
-INSERT INTO `dictionary` VALUES (1,'hi','你好'),(2,'how are you','你好吗'),(3,'how old are you?translation=','你多大'),(12,'hello','你好'),(14,'ability','能力'),(15,'abandon','抛弃'),(16,'able','有才能的'),(17,'about','关于'),(18,'absence','缺席'),(19,'absolute','绝对的');
+INSERT INTO `dictionary` VALUES (1,'hi','你好'),(2,'how are you','你好吗'),(3,'how old are you','你多大'),(12,'hello','你好'),(14,'ability','能力'),(15,'abandon','抛弃'),(16,'able','有才能的'),(17,'about','关于'),(18,'absence','缺席'),(19,'absolute','绝对的');
 /*!40000 ALTER TABLE `dictionary` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
