@@ -1,9 +1,8 @@
-#Node App
 ##Installation
 ```bash
 npm init
 ```
-Usage
+##Usage
 ```bash
 node app.js
 ```
